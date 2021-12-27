@@ -1,0 +1,20 @@
+int sensor = 0;
+
+void setup(){
+  
+  pinMode(1, INPUT);//initalizing pins we will use
+  pinMode(4, OUTPUT);
+  
+}
+
+void loop(){
+  sensor = digitalRead(1); //input from sensor
+  if (sensor == HIGH){
+    digitalWrite(4, HIGH);// turns on led and buzzer
+  }
+  
+  else{
+    digitalWrite(4, LOW);// turns off led and buzzer
+  }
+  delay(15);
+}
